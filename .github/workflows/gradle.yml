@@ -33,7 +33,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           source: "/build/libs/*.jar"
-          target: "/home/ubuntu/file-manager/backend.jar"
+          target: "/home/park/file-manager/backend.jar"
 
       - name: Restart Docker
         uses: appleboy/ssh-action@master
@@ -43,6 +43,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/ubuntu/file-manager
+            cd /home/park/file-manager
             docker-compose down
             docker-compose up -d --build
