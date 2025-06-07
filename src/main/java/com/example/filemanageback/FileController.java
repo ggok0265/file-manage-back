@@ -18,7 +18,7 @@ public class FileController {
     private final FileService fileService;
 
     @GetMapping("/files")
-    public List<Map<String, String>> listFiles(@RequestParam(defaultValue = "") String path) {
+    public List<Map<String, String>> listFiles(@RequestParam(defaultValue = "/") String path) {
         return fileService.listFiles(path);
     }
 
