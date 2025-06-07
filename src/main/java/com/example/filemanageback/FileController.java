@@ -1,6 +1,5 @@
 package com.example.filemanageback;
 
-import com.example.filemanageback.FileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.Resource;
 import org.springframework.http.*;
@@ -11,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping
 @RequiredArgsConstructor
 public class FileController {
 

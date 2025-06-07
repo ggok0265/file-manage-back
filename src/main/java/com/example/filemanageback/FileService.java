@@ -26,6 +26,7 @@ public class FileService {
     // 파일 및 디렉토리 목록 반환
     public List<Map<String, String>> listFiles(String subPath) {
         File folder = resolvePath(subPath).toFile();
+        System.out.println("접근 경로: " + folder.getAbsolutePath());
 
         if (!folder.exists() || !folder.isDirectory()) {
             throw new RuntimeException("디렉토리가 존재하지 않거나 디렉토리가 아님: " + folder.getAbsolutePath());
