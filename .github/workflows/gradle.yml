@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "/build/libs/*.jar"
+          source: "build/libs/*.jar"
           target: "/home/park/file-manager/"
 
       - name: Restart Docker
