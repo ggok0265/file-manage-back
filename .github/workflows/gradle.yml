@@ -23,7 +23,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build Spring Boot App
-        run: ./gradlew clean build -x test
+        run: ./gradlew clean bootjar
 
       - name: List JAR files
         run: ls -al build/libs
